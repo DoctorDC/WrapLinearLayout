@@ -30,11 +30,11 @@ public class WarpLinearLayout extends ViewGroup {
     }
 
     private int getWrapHeight(int widthMeasureSpec) {
-        WrapLayoutParams params;
-        int row = 1;
+        WrapLayoutParams params; //边距
+        int row = 1; //行号
         int maxWidth = MeasureSpec.getSize(widthMeasureSpec);
-        int occupancyWidth = 0;
-        int occupancyHeight = 0;
+        int occupancyWidth = 0; //所占宽度
+        int occupancyHeight = 0; //所占高度
 
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
